@@ -1,6 +1,6 @@
 class Human {
     private int age;
-    private String name ;
+    private String name;
 
     public Human(){
         System.out.println("Inside Constructor");  //Every time we create a new object, it'll call the constructor.
@@ -24,7 +24,6 @@ class Human {
     public void setName(String name){
         this.name = name;                   // this keyword represents the current object 
     }
-
 }
 
 public class Encaps {
@@ -38,6 +37,5 @@ public class Encaps {
         //Accessing values of private feilds.
         System.out.println("Name : " + " " + h1.getName());
         System.out.println("Age : " + " " + h1.getAge());
-
     }
 }

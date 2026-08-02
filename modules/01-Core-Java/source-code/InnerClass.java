@@ -24,6 +24,7 @@ abstract class India{
     public abstract void show();
 }
 public class InnerClass {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         A obj = new A();
         obj.show();

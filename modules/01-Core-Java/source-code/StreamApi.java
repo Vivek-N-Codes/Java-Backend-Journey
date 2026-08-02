@@ -32,7 +32,7 @@ public class StreamApi {
         System.out.println();  //New line.
 
         // Stream :-
-        Stream<Integer> s1 = Li.stream();    // Can only use this only once.
+        Stream<Integer> s1 = Li.stream();    // Can use this only once.
         Stream<Integer> s2 = s1.filter(n -> n % 2 == 0);                            //filter 
         // s2.forEach(n -> System.out.print(n + " "));   // We can use a stream only once.
         Stream<Integer> s3 = s2.map(n -> n*2);                                      //map

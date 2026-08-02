@@ -19,6 +19,7 @@ class Bullet extends Honda {
 }
 
 public class FinalKeyword {
+    @SuppressWarnings("unused")
     public static void main(String args[]){
         final int a = 10;
         // a = 11;   final variable cannot be changed once it declared.

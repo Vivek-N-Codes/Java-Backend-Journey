@@ -9,6 +9,7 @@ class Pqr{
     }
 }
 public class Exceptions {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         int n = 12;
         // int d = 0;

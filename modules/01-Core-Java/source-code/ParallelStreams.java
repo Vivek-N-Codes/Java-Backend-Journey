@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Stream;
 
+@SuppressWarnings("unused")
 public class ParallelStreams {
     public static void main(String[] args) {
         int size = 10_000;

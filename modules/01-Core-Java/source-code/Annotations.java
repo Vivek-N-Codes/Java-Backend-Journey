@@ -7,6 +7,7 @@ class Abc{
     }
 }
 
+@SuppressWarnings("deprecation")
 class Bcd extends Abc{
     @Override       // shows Bugs (Logical Errors) at compile time.
     public void showTheDataBelongsToThisClassOnly(){ 

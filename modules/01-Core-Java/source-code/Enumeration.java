@@ -25,6 +25,7 @@ enum Laptop{
 }
 
 public class Enumeration {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         Status s = Status.Running;
         System.out.println(s.ordinal());   // Will print the index of Running i.e. 0.
@@ -53,6 +54,7 @@ public class Enumeration {
             System.out.println(laps + " : " + laps.getPrice() + "$");
         }
         
+        @SuppressWarnings("unused")
         Laptop laps = Laptop.Lenovo;  // Will be the object with no prize since it calling the default constructor; 
     }
 }
