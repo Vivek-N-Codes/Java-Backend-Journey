@@ -1,6 +1,13 @@
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+// import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTimeout;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+// import static org.junit.jupiter.api.Assertions.fail;
+
+import java.time.Duration;
 
 import org.junit.jupiter.api.Test;
 
@@ -44,6 +51,44 @@ public class AppTest {
         assertTrue(result);
         // Check for boolean result true, if result = true -> test passes, else -> test fails.
     }
-
+    
     // We also have the assertFalse().
+    
+    @Test
+    void arrayTest() {
+        ArrayTest obj = new ArrayTest();
+        int[] actual = {4, 5, 2 ,3};
+        int[] expected = obj.sortArray(actual);
+        assertArrayEquals(actual, expected);
+    }
+    @Test
+    void nullExceptionCheck() {
+        ArrayTest obj = new ArrayTest();
+        int[] actual = null;
+        // try{
+        //     int[] expected = obj.sortArray(actual);
+        //     assertArrayEquals(actual, expected);
+        //     System.out.println("Statement below the exception");
+        //     fail();
+        // }
+        // catch(NullPointerException e){
+        //     System.out.println("Exception Generated");
+        // }
+
+       assertThrows(NullPointerException.class, () -> obj.sortArray(actual));
+
+    }
+
+    @Test
+    void methodPerformanceCheck() {
+        ArrayTest obj = new ArrayTest();
+        assertTimeout(Duration.ofMillis(5), () -> obj.sumOf(10)); 
+        // It'll check for the provided executable is executing within the time or not 
+        // (CPU dependent & can varry machine to machine)
+    }
+
+    
+
+    
+    
 }
