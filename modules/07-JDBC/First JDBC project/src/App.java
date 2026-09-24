@@ -1,6 +1,5 @@
 import java.sql.*;
 
-import com.mysql.cj.x.protobuf.MysqlxCrud.Insert;
 public class App {
     public static void main(String[] args) throws ClassNotFoundException, SQLException, InstantiationException {
         // Load and Register the Driver.
@@ -34,8 +33,6 @@ public class App {
         else{
             System.out.println("Data inserted successfully.");
         }
-
-        
 
         // Close the connection
         statement.close();
